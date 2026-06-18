@@ -1,0 +1,59 @@
+name: Count Lines of Code
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  count-loc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Count lines of code
+        run: |
+          echo "=== Code Statistics ==="
+          echo "Total files by extension:"
+          find . -type f -name "*.js" -o -name "*.ts" -o -name "*.vue" -o -name "*.html" -o -name "*.css" -o -name "*.scss" -o -name "*.json" | grep -v node_modules | grep -v dist | sort | uniq -c | sort -rn
+          echo ""
+          echo "Lines of code by extension (excluding node_modules and dist):"
+          for ext in js ts vue html css scss json; do
+            count=$(find . -type f -name "*.$ext" ! -path "*/node_modules/*" ! -path "*/dist/*" -exec wc -l {} + 2>/dev/null | tail -1 | awk '{print $1}')
+            if [ -n "$count" ]; then
+              echo "*.$ext: $count lines"
+            fi
+          done
+          echo ""
+          echo "Total lines of code:"
+          find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.vue" -o -name "*.html" -o -name "*.css" -o -name "*.scss" -o -name "*.json" \) ! -path "*/node_modules/*" ! -path "*/dist/*" -exec wc -l {} + 2>/dev/null | tail -1 | awk '{print "Total: " $1 " lines"}'
+
+      - name: Generate detailed report
+        run: |
+          echo "# Code Statistics Report" > loc-report.md
+          echo "Generated at: $(date)" >> loc-report.md
+          echo "" >> loc-report.md
+          echo "## Summary" >> loc-report.md
+          echo "" >> loc-report.md
+          find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.vue" -o -name "*.html" -o -name "*.css" -o -name "*.scss" -o -name "*.json" \) ! -path "*/node_modules/*" ! -path "*/dist/*" -exec wc -l {} + 2>/dev/null | tail -1 | awk '{print "**Total Lines:** " $1}' >> loc-report.md
+          echo "" >> loc-report.md
+          echo "## Breakdown by File Type" >> loc-report.md
+          echo "" >> loc-report.md
+          echo "| Extension | Files | Lines |" >> loc-report.md
+          echo "|-----------|-------|-------|" >> loc-report.md
+          for ext in js ts vue html css scss json; do
+            files=$(find . -type f -name "*.$ext" ! -path "*/node_modules/*" ! -path "*/dist/*" | wc -l)
+            lines=$(find . -type f -name "*.$ext" ! -path "*/node_modules/*" ! -path "*/dist/*" -exec wc -l {} + 2>/dev/null | tail -1 | awk '{print $1}')
+            if [ -n "$lines" ] && [ "$lines" -gt 0 ] 2>/dev/null; then
+              echo "| .$ext | $files | $lines |" >> loc-report.md
+            fi
+          done
+          cat loc-report.md
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: loc-report
+          path: loc-report.md
