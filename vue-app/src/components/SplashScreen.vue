@@ -1,0 +1,95 @@
+<script setup>
+import { ref } from 'vue'
+import RichText from './RichText.vue'
+
+const props = defineProps({
+  data: { type: Object, required: true },
+  isKanaPage: { type: Boolean, default: false },
+})
+
+const emit = defineEmits(['consent'])
+
+const visible = ref(true)
+const rejected = ref(false)
+
+function accept() {
+  visible.value = false
+  emit('consent')
+}
+
+function reject() {
+  rejected.value = true
+  setTimeout(() => {
+    window.location.href = 'about:blank'
+  }, 5000)
+}
+
+const rejectionTitle = [
+  { type: 'text', content: 'アクセスが制限されました' }
+]
+const rejectionTitleKana = [
+  { type: 'text', content: 'アクセスが' },
+  { type: 'ruby', kanji: '制限', reading: 'せいげん' },
+  { type: 'text', content: 'されました' }
+]
+const rejectionText1 = [
+  { type: 'text', content: 'プライバシーポリシーに同意しない場合、サイトにアクセスできません。' }
+]
+const rejectionText1Kana = [
+  { type: 'text', content: 'プライバシーポリシーに' },
+  { type: 'ruby', kanji: '同意', reading: 'どうい' },
+  { type: 'text', content: 'しない' },
+  { type: 'ruby', kanji: '場合', reading: 'ばあい' },
+  { type: 'text', content: '、サイトにアクセスできません。' }
+]
+const rejectionText2 = [
+  { type: 'text', content: '5秒後にトップページにリダイレクトします...' }
+]
+const rejectionText2Kana = [
+  { type: 'text', content: '5' },
+  { type: 'ruby', kanji: '秒後', reading: 'びょうご' },
+  { type: 'text', content: 'にトップページにリダイレクトします...' }
+]
+</script>
+
+<template>
+  <div v-if="visible && !rejected" class="splash-screen">
+    <div class="splash-content">
+      <h2 class="privacy-title">
+        <RichText :segments="data.titleRich" />
+      </h2>
+      <p v-for="(text, i) in data.texts" :key="i" class="privacy-text">
+        <RichText :segments="text" />
+      </p>
+      <div class="privacy-links">
+        <a v-for="(link, i) in data.links" :key="i" :href="link.href === 'document.html' ? '?page=document' : link.href" class="privacy-link">
+          <RichText :segments="link.text" />
+        </a>
+      </div>
+      <div class="privacy-buttons">
+        <button
+          v-for="btn in data.buttons"
+          :key="btn.id"
+          :id="btn.id"
+          :class="['consent-button', btn.id === 'consent-accept' ? 'accept' : 'reject']"
+          @click="btn.id === 'consent-accept' ? accept() : reject()"
+        >
+          <RichText :segments="btn.text" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div v-if="rejected" class="splash-screen">
+    <div class="splash-content">
+      <h3 class="privacy-title">
+        <RichText :segments="isKanaPage ? rejectionTitleKana : rejectionTitle" />
+      </h3>
+      <p class="privacy-text">
+        <RichText :segments="isKanaPage ? rejectionText1Kana : rejectionText1" />
+      </p>
+      <p class="privacy-text">
+        <RichText :segments="isKanaPage ? rejectionText2Kana : rejectionText2" />
+      </p>
+    </div>
+  </div>
+</template>

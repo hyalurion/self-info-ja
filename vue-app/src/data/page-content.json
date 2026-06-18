@@ -1,0 +1,727 @@
+{
+  "meta": {
+    "title": "自己紹介 (にゃんこ日本語)",
+    "description": "自己紹介 - 日本語（日本）",
+    "keywords": "自己紹介,個人紹介,日本語,日本,ja,じこしょうかい",
+    "author": "琉璃ねこたん",
+    "ogTitle": "自己紹介（にゃんこ日本語）",
+    "ogDescription": "自己紹介 - 日本語",
+    "ogLocale": "ja_JP",
+    "favicon": "pic/kawai_neko_icon.svg",
+    "themeColor": "#ffffff"
+  },
+  "stylesheets": [
+    "components/kana.css",
+    "components/splash-screen.css",
+    "components/style.css",
+    "components/liquid-glass-block.css",
+    "components/birthday.css"
+  ],
+  "scripts": [],
+  "splashScreen": {
+    "title": "プライバシーポリシー同意",
+    "titleRich": [
+      {
+        "type": "text",
+        "content": "プライバシーポリシー同意"
+      }
+    ],
+    "texts": [
+      [
+        {
+          "type": "text",
+          "content": "サイトはGoogleアナリティクス4（GA4）を使っています♡"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "content": "アクセスした瞬間に、あなたの大切なデータ（IPアドレス・クッキー・位置情報など）をGoogleとシェアしたり海外に送ったりすることに同意したことになりますね～"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "content": "プライバシー保護のために全力で匿名化してるよ！★"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "content": "アクセスを続けると、データがアメリカに送られちゃうことに同意したことになるよ～！アメリカの法律が適用されるかもだよ～うぅ～(´•ω•｀)♡"
+        }
+      ]
+    ],
+    "links": [
+      {
+        "text": [
+          {
+            "type": "text",
+            "content": "もっと知りたい？（English）"
+          }
+        ],
+        "href": "https://storage.googleapis.com/support-kms-prod/KYaKZ5CAhIQ4rjgEFWIy6qKRzRSJjdGjrYFW"
+      },
+      {
+        "text": [
+          {
+            "type": "text",
+            "content": "プライバシー同意書"
+          }
+        ],
+        "href": "document.html"
+      }
+    ],
+    "buttons": [
+      {
+        "text": [
+          {
+            "type": "text",
+            "content": "ぽちっと続ける？"
+          }
+        ],
+        "id": "consent-accept"
+      },
+      {
+        "text": [
+          {
+            "type": "text",
+            "content": "それとも…すぐに出る？"
+          }
+        ],
+        "id": "consent-reject"
+      }
+    ]
+  },
+  "loadingScreen": {
+    "text": "少女がお願いを祈ってるよ…",
+    "textRich": [
+      {
+        "type": "text",
+        "content": "少女がお願いを祈ってるよ…"
+      }
+    ]
+  },
+  "header": {
+    "lines": [
+      [
+        {
+          "type": "text",
+          "content": "はーい、初めましてにゃん！ (◕‿◕✿)"
+        }
+      ],
+      [
+        {
+          "type": "highlight",
+          "content": [
+            {
+              "type": "text",
+              "content": "琉璃（ゆり）ねこたん"
+            }
+          ],
+          "style": "",
+          "class": "highlight"
+        },
+        {
+          "type": "info",
+          "content": [
+            {
+              "type": "text",
+              "content": "って呼んでね～"
+            }
+          ],
+          "class": "info-text"
+        }
+      ],
+      [
+        {
+          "type": "info",
+          "content": [
+            {
+              "type": "text",
+              "content": "星みたいにキラキラの"
+            }
+          ],
+          "class": "info-text"
+        },
+        {
+          "type": "highlight",
+          "content": [
+            {
+              "type": "text",
+              "content": "Hyalurion"
+            }
+          ],
+          "style": "",
+          "class": "highlight"
+        },
+        {
+          "type": "info",
+          "content": [
+            {
+              "type": "text",
+              "content": "でもOKだよん！✨"
+            }
+          ],
+          "class": "info-text"
+        }
+      ]
+    ]
+  },
+  "sections": [
+    {
+      "type": "birthday",
+      "title": "🎂 誕生ひみつ物語",
+      "titleRich": [
+        {
+          "type": "text",
+          "content": "🎂 誕生ひみつ物語"
+        }
+      ],
+      "countdown": {
+        "cakeIcon": "🎂",
+        "todayText": "今日は、私の誕生日なんだよ～！(＊´∀｀*)ﾉ"
+      },
+      "items": [
+        [
+          {
+            "type": "highlight",
+            "content": [
+              {
+                "type": "text",
+                "content": "乙女座の"
+              }
+            ],
+            "style": "",
+            "class": "highlight"
+          },
+          {
+            "type": "highlight",
+            "content": [
+              {
+                "type": "text",
+                "content": "魔法"
+              }
+            ],
+            "style": "",
+            "class": "highlight ql-size-5"
+          },
+          {
+            "type": "highlight",
+            "content": [
+              {
+                "type": "text",
+                "content": "が咲いた初日"
+              }
+            ],
+            "style": "",
+            "class": "highlight"
+          },
+          {
+            "type": "info",
+            "content": [
+              {
+                "type": "text",
+                "content": "に地球に降り立ったの～"
+              }
+            ],
+            "class": "info-text"
+          }
+        ],
+        [
+          {
+            "type": "info",
+            "content": [
+              {
+                "type": "text",
+                "content": "（"
+              }
+            ],
+            "class": "info-text"
+          },
+          {
+            "type": "highlight",
+            "content": [
+              {
+                "type": "text",
+                "content": "旧暦7月11日"
+              }
+            ],
+            "style": "",
+            "class": "highlight"
+          },
+          {
+            "type": "info",
+            "content": [
+              {
+                "type": "text",
+                "content": "の月明かりが子守唄だったにゃ！🌙）"
+              }
+            ],
+            "class": "info-text"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "language",
+      "title": "🗣️ 言語ポケット",
+      "titleRich": [
+        {
+          "type": "text",
+          "content": "🗣️ 言語ポケット"
+        }
+      ],
+      "items": [
+        [
+          {
+            "type": "highlight",
+            "content": [
+              {
+                "type": "text",
+                "content": "日本語・英語・簡体字中国語・繁体字中国語"
+              }
+            ],
+            "style": "color: #d5ffbf;",
+            "class": ""
+          },
+          {
+            "type": "info",
+            "content": [
+              {
+                "type": "text",
+                "content": "全部話せるよ！"
+              }
+            ],
+            "class": "info-text"
+          }
+        ],
+        [
+          {
+            "type": "info",
+            "content": [
+              {
+                "type": "text",
+                "content": "（言語チェンジはポケモンのタイプ変更みたいで楽しいぃ～(◠‿◠✿)）"
+              }
+            ],
+            "class": "info-text"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "acgn",
+      "title": "🌈 ACGN 原子構成",
+      "titleRich": [
+        {
+          "type": "text",
+          "content": "🌈 ACGN 原子構成"
+        }
+      ],
+      "items": [
+        [
+          {
+            "type": "info",
+            "content": [
+              {
+                "type": "text",
+                "content": "確認ぷり！アニメ・マンガ・ゲーム・小説が"
+              }
+            ],
+            "class": "info-text"
+          }
+        ],
+        [
+          {
+            "type": "info",
+            "content": [
+              {
+                "type": "text",
+                "content": "私の宇宙を形作る"
+              }
+            ],
+            "class": "info-text"
+          },
+          {
+            "type": "highlight",
+            "content": [
+              {
+                "type": "text",
+                "content": "素粒子"
+              }
+            ],
+            "style": "",
+            "class": "highlight"
+          },
+          {
+            "type": "info",
+            "content": [
+              {
+                "type": "text",
+                "content": "なの～ ★~(◠‿◕✿)"
+              }
+            ],
+            "class": "info-text"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "personality",
+      "title": "💖 心のパズル (INFJ-T 限定ver.)",
+      "titleRich": [
+        {
+          "type": "text",
+          "content": "💖 心のパズル (INFJ-T 限定ver.)"
+        }
+      ],
+      "items": [
+        {
+          "label": [
+            {
+              "type": "text",
+              "content": "充電モード："
+            }
+          ],
+          "value": [
+            {
+              "type": "text",
+              "content": "83％ひとりんぼタイム必須"
+            }
+          ],
+          "note": [
+            {
+              "type": "text",
+              "content": "（お布団で本読むのが至福ぅ～(｡>ㅅ<｡)）"
+            }
+          ]
+        },
+        {
+          "label": [
+            {
+              "type": "text",
+              "content": "脳内劇場："
+            }
+          ],
+          "value": [
+            {
+              "type": "text",
+              "content": "74％暴走幻想中"
+            }
+          ],
+          "note": [
+            {
+              "type": "text",
+              "content": "（異世界への扉は常時オープン！🚪✨）"
+            }
+          ]
+        },
+        {
+          "label": [
+            {
+              "type": "text",
+              "content": "感情アンテナ："
+            }
+          ],
+          "value": [
+            {
+              "type": "text",
+              "content": "82％超高感度"
+            }
+          ],
+          "note": [
+            {
+              "type": "text",
+              "content": "（君の小さな悲しみ、もしかして感知しちゃうかも？(｡･ω･｡)）"
+            }
+          ]
+        },
+        {
+          "label": [
+            {
+              "type": "text",
+              "content": "行動指針："
+            }
+          ],
+          "value": [
+            {
+              "type": "text",
+              "content": "83％計画型にゃん"
+            }
+          ],
+          "note": [
+            {
+              "type": "text",
+              "content": "（ToDoリスト作成は趣味です✓）"
+            }
+          ]
+        },
+        {
+          "label": [
+            {
+              "type": "text",
+              "content": "お天気ハート："
+            }
+          ],
+          "value": [
+            {
+              "type": "text",
+              "content": "82％にわか雨注意報☁️➡️🌧️"
+            }
+          ],
+          "note": [
+            {
+              "type": "text",
+              "content": "（でも虹が出たら即時晴れます！(๑´ڡ`๑)）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "lucky",
+      "title": "🍀 幸運センサー",
+      "titleRich": [
+        {
+          "type": "text",
+          "content": "🍀 幸運センサー"
+        }
+      ],
+      "content": [
+        {
+          "type": "info",
+          "content": [
+            {
+              "type": "text",
+              "content": "電波微弱…（"
+            }
+          ],
+          "class": "info-text"
+        },
+        {
+          "type": "highlight",
+          "content": [
+            {
+              "type": "text",
+              "content": "四つ葉のクローバー見つけたら一日中ルンルン！"
+            }
+          ],
+          "style": "",
+          "class": "highlight"
+        },
+        {
+          "type": "info",
+          "content": [
+            {
+              "type": "text",
+              "content": "(⁄ ⁄•⁄ω⁄•⁄ ⁄)）"
+            }
+          ],
+          "class": "info-text"
+        }
+      ]
+    },
+    {
+      "type": "games",
+      "title": "🎮 ゲーム惑星",
+      "titleRich": [
+        {
+          "type": "text",
+          "content": "🎮 ゲーム惑星"
+        }
+      ],
+      "gameEntries": [
+        {
+          "img": "pic/geshin.jpg",
+          "imgAlt": "原神",
+          "uid": "887948106"
+        },
+        {
+          "img": "pic/hsr.jpg",
+          "imgAlt": "崩壊：スターレイル",
+          "uid": "800035446"
+        }
+      ],
+      "content": [
+        {
+          "type": "info",
+          "content": [
+            {
+              "type": "text",
+              "content": "現在"
+            }
+          ],
+          "class": "info-text"
+        },
+        {
+          "type": "highlight",
+          "content": [
+            {
+              "type": "text",
+              "content": "「原神」"
+            }
+          ],
+          "style": "",
+          "class": "highlight"
+        },
+        {
+          "type": "game-card",
+          "img": "pic/geshin.jpg",
+          "imgAlt": "原神",
+          "uid": "887948106"
+        },
+        {
+          "type": "info",
+          "content": [
+            {
+              "type": "text",
+              "content": "と"
+            }
+          ],
+          "class": "info-text"
+        },
+        {
+          "type": "highlight",
+          "content": [
+            {
+              "type": "text",
+              "content": "「崩壊：スターレイル」"
+            }
+          ],
+          "style": "",
+          "class": "highlight"
+        },
+        {
+          "type": "game-card",
+          "img": "pic/hsr.jpg",
+          "imgAlt": "崩壊：スターレイル",
+          "uid": "800035446"
+        },
+        {
+          "type": "info",
+          "content": [
+            {
+              "type": "text",
+              "content": "に重力捕捉されてまーす☆ミ(o･ω･)ﾉ"
+            }
+          ],
+          "class": "info-text"
+        }
+      ]
+    },
+    {
+      "type": "sns",
+      "title": "🔗 SNS",
+      "titleRich": [
+        {
+          "type": "text",
+          "content": "🔗 SNS"
+        }
+      ],
+      "link": {
+        "href": "https://m.hoyolab.com/#/accountCenter/postList?id=317761459",
+        "img": "pic/hyl_icon.jpg",
+        "imgAlt": "HoYoLAB",
+        "text": [
+          {
+            "type": "text",
+            "content": "@琉璃 Hyalurion（ID | 317761459）"
+          }
+        ]
+      }
+    },
+    {
+      "type": "closing",
+      "lines": [
+        [
+          {
+            "type": "info",
+            "content": [
+              {
+                "type": "text",
+                "content": "よろしくお願いしますぅ～"
+              }
+            ],
+            "class": "info-text"
+          }
+        ],
+        [
+          {
+            "type": "info",
+            "content": [
+              {
+                "type": "text",
+                "content": "一緒にぷかぷか幸せ宇宙を共有しましょ！"
+              }
+            ],
+            "class": "info-text"
+          }
+        ],
+        [
+          {
+            "type": "info",
+            "content": [
+              {
+                "type": "text",
+                "content": "(♡´౪`♡) にゃん♪"
+              }
+            ],
+            "class": "info-text"
+          }
+        ]
+      ]
+    }
+  ],
+  "footer": {
+    "lines": [
+      [
+        {
+          "type": "text",
+          "content": "月に寄りそう乙女の作法 ルナちょむ"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "content": "Pixiv ID | 133337546"
+        }
+      ]
+    ]
+  },
+  "ui": {
+    "bgm": {
+      "src": "bgm/bgm_kokoronashi.mp3"
+    },
+    "kanaButton": {
+      "href": "index-kana.html",
+      "text": "仮名",
+      "textRich": [
+        {
+          "type": "ruby",
+          "kanji": "仮名",
+          "reading": "がな"
+        }
+      ]
+    },
+    "feedback": {
+      "href": "https://jyskyp4y.forms.app/untitled-form",
+      "img": "pic/feedback.svg"
+    },
+    "changelog": {
+      "href": "https://changelog-viewer.netlify.app/",
+      "date": "✨更新 |26/06/19 ✨",
+      "dateRich": [
+        {
+          "type": "text",
+          "content": "✨更新 |"
+        },
+        {
+          "type": "text",
+          "content": "26/06/19 ✨"
+        }
+      ],
+      "img": "pic/changelog.svg"
+    }
+  }
+}
